@@ -20,6 +20,9 @@ Route::get('/', function () {
 });
 
 
+Route::get('test', function () {
+    return Doctor::all();
+});
 
 
 Auth::routes();
