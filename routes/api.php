@@ -1,10 +1,12 @@
 <?php
 
 use App\Doctor;
+use App\Http\Controllers\api\DoctorController;
 use App\Http\Resources\DoctorsResource;
 use App\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
