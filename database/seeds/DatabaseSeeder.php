@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(UsersTableSeeder::class);
  //       factory(User ::class , 1000)->create();
- //       factory(Doctor ::class , 100)->create();
+   //     factory(Doctor ::class , 100)->create();
   //      factory(Patient ::class , 600)->create();
   //      factory(Nurse ::class , 150)->create();
   //      factory(Employee ::class , 150)->create();
@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
   //      factory(Sex ::class , 3)->create();
  //      factory(Blood ::class , 8)->create();
  //       factory(Job ::class ,11)->create();
- //       factory(Specialization ::class ,10)->create();
+        factory(Specialization ::class ,10)->create();
 //
  //       factory(Ambulance ::class ,10)->create();
  //       factory(Anesthetic ::class ,20)->create();
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
  //       factory(Analyze ::class ,20)->create();
  //       factory(\App\Test ::class ,300)->create();
  //       factory(Day ::class ,7)->create();
-          factory(Role::class,5)->create();
+  //        factory(Role::class,5)->create();
 
     }
 }
