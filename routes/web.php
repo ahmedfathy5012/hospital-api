@@ -16,7 +16,8 @@ use App\Patient;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return Doctor::all();
 });
 
 
