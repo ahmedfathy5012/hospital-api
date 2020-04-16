@@ -7,6 +7,7 @@ use App\Http\Resources\UsersResource;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -37,6 +38,25 @@ class UserController extends Controller
        return $user->id;
     }
 
+
+
+    public function login(Request $request){
+        $request->validate([
+            'Identification_number' => 'required',
+            'password'=>'required',
+        ]);
+        $userIdent = $request->input('Identification_number');
+        $credintials = $request->only('Identification_number','password');
+        if(Auth::attempt($credintials)){
+            $user = User::where('Identification_number' , $userIdent)->first();
+            return new UserResource($user);
+        }
+        $message = [
+            'error' => true,
+            'message' => 'User Login attempt Failed' ,
+        ];
+        return response($message,300);
+    }
 
     public function store(Request $request)
     {

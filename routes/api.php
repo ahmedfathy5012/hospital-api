@@ -154,7 +154,12 @@ Route::post('add-clinic', 'Api\ClinicController@store');
 
 
 Route::post('add-doctor', 'Api\DoctorController@store');
-Route::post('add-user', 'Api\USerController@register');
+Route::post('add-user', 'Api\UserController@register');
+
+
+Route::post('login', 'Api\UserController@login');
+
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

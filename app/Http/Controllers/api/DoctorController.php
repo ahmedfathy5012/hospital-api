@@ -50,10 +50,11 @@ class DoctorController extends Controller
             'date_of_hiring'=>'required'
         ]);
         $user = new User();
+        $user->role_id = 3 ;
         $user->Identification_number = $request->input('Identification_number');
         $user->name = $request->input('first_name');
         $user->password = Hash::make($request->input('Identification_number'));
-        //$user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
+        $user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
         $user->save();
    // Hash::make($request->input('Identification_number'));
         $doctor = new Doctor();
