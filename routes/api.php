@@ -155,7 +155,7 @@ Route::post('add-clinic', 'Api\ClinicController@store');
 
 Route::post('add-doctor', 'Api\DoctorController@store');
 Route::post('add-user', 'Api\UserController@register');
-
+Route::get('data-count', 'Api\UserController@data_count');
 
 Route::post('login', 'Api\UserController@login');
 

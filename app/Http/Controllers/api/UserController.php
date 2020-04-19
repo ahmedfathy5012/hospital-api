@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\api;
 
+use App\Doctor;
+use App\Http\Resources\CountResource;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\UsersResource;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\VarDumper\Cloner\Data;
 
 class UserController extends Controller
 {
@@ -55,13 +58,21 @@ class UserController extends Controller
             'error' => true,
             'message' => 'User Login attempt Failed' ,
         ];
-        return response($message,300);
+        return response($message,401);
     }
+
+
+    public function data_count(){
+        return new CountResource(User::all());
+    }
+
 
     public function store(Request $request)
     {
         //
     }
+
+
 
     /**
      * Display the specified resource.
