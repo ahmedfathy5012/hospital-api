@@ -63,8 +63,8 @@ class DoctorController extends Controller
             $doctor->second_name = $request->input('second_name');
         if($request->has('third_name'))
             $doctor->third_name = $request->input('third_name');
-            $doctor->specialization_id = $request->input('specialization_id');
-            $doctor->nationality_id = $request->input('nationality_id');
+            $doctor->specialization_id = (int)$request->input('specialization_id');
+            $doctor->nationality_id = (int)$request->input('nationality_id');
             $doctor->address = $request->input('address');
         if($request->has('date_of_birth'))
             $doctor->date_of_birth = $request->input('date_of_birth');
@@ -72,9 +72,9 @@ class DoctorController extends Controller
             $doctor->email = $request->input('email');
         if($request->has('social_status'))
             $doctor->social_status = $request->input('social_status');
-            $doctor->job_id = $request->input('job_id');
-            $doctor->sex_id = $request->input('sex_id');
-            $doctor->blood_id = $request->input('blood_id');
+            $doctor->job_id = (int)$request->input('job_id');
+            $doctor->sex_id = (int)$request->input('sex_id');
+            $doctor->blood_id = (int)$request->input('blood_id');
         if($request->has('notes'))
             $doctor->notes = $request->input('notes');
         if($request->has('image'))
@@ -94,7 +94,8 @@ class DoctorController extends Controller
      */
     public function show($id)
     {
-        $doctor = Doctor::with(['blood','operations_anesthesiologist','job','sex','nationality','specialization','doctor_problems','deads','diagnoses','tests','emergencies','work_periods','operations_surgeon','user'])->find($id);
+        $doctor = Doctor::with(['blood','job','sex','nationality','specialization','doctor_problems','deads','diagnoses','tests','emergencies','work_periods','operations_surgeon','user'])->find($id);
+       // return  $doctor;
         return new DoctorResource($doctor);
     }
 

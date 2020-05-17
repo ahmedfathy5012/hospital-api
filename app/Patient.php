@@ -71,6 +71,8 @@ class Patient extends Model
     }
 
     public function show_name(){
-        return $this->first_name." "." ".$this->third_name;
+        return $this->first_name." ".$this->third_name;
     }
+
+
 }

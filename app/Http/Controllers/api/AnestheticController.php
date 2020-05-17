@@ -17,8 +17,8 @@ class AnestheticController extends Controller
      */
     public function index()
     {
-        $anesthetics = Anesthetic::with(['operations'])->paginate();
-        return new AnestheticsResource($anesthetics);
+        $anesthetics = Anesthetic::all();
+        return AnestheticsResource::collection($anesthetics);
     }
 
     /**

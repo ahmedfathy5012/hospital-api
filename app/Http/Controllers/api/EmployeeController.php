@@ -5,8 +5,13 @@ namespace App\Http\Controllers\api;
 use App\Employee;
 use App\Http\Resources\EmployeeResource;
 use App\Http\Resources\EmployeesResource;
+use App\Http\Resources\NurseResource;
+use App\Http\Resources\NursesResource;
+use App\Nurse;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class EmployeeController extends Controller
 {
@@ -17,8 +22,22 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::with(['job','sex','blood','nationality','ambulance_drivers','ambulance_paramedics','user'])->paginate();
-        return  new EmployeesResource($employees);
+        $employees = Employee::with(['job',])->get();
+        return  EmployeesResource::collection($employees);
+    }
+
+
+
+    public function index1()
+    {
+        $nurses = Nurse::with(['job'])->get();
+        return NursesResource::collection($nurses);
+    }
+
+    public function show1($id)
+    {
+        $nurse = Nurse::with(['job','sex','blood','nationality','user'])->find($id);
+        return new NurseResource($nurse);
     }
 
     /**
@@ -29,7 +48,53 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'Identification_number' => 'required',
+            'first_name'=>'required',
+            'first_name'=>'required',
+            'second_name'=>'required',
+            'nationality_id'=>'required',
+            'address'=>'required',
+            'phone'=>'required',
+            'email'=>'required',
+            'social_status'=>'required',
+            'job_id'=>'required',
+            'sex_id'=>'required',
+            'blood_id'=>'required',
+            'date_of_hiring'=>'required'
+        ]);
+        $user = new User();
+        $user->role_id = 2 ;
+        $user->Identification_number = $request->input('Identification_number');
+        $user->name = $request->input('first_name');
+        $user->password = Hash::make($request->input('Identification_number'));
+        $user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
+        $user->save();
+
+        $employee = new Employee();
+        $employee->first_name = $request->input('first_name');
+        $employee->second_name = $request->input('second_name');
+        if($request->has('third_name'))
+            $employee->third_name = $request->input('third_name');
+        $employee->nationality_id = (int)$request->input('nationality_id');
+        $employee->address = $request->input('address');
+        if($request->has('date_of_birth'))
+            $employee->date_of_birth = $request->input('date_of_birth');
+        $employee->phone = $request->input('phone');
+        $employee->email = $request->input('email');
+        if($request->has('social_status'))
+            $employee->social_status = $request->input('social_status');
+        $employee->job_id = (int)$request->input('job_id');
+        $employee->sex_id = (int)$request->input('sex_id');
+        $employee->blood_id = (int)$request->input('blood_id');
+        if($request->has('notes'))
+            $employee->notes = $request->input('notes');
+        if($request->has('image'))
+            $employee->image = $request->input('image');
+        $employee->date_of_hiring = $request->input('date_of_hiring');
+        $employee->user_id = $user->id;
+        $employee->save();
+        return  new EmployeeResource($employee);
     }
 
     /**
@@ -40,8 +105,8 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        $employee = Employee::with(['job','sex','blood','nationality','ambulance_drivers','ambulance_paramedics','user'])->where('id',$id)->get();
-        return  new EmployeeResource($employee);
+        $employee = Employee::with(['job','sex','blood','nationality','ambulance_drivers','ambulance_paramedics','user'])->find($id);
+        return new EmployeeResource($employee);
     }
 
     /**
@@ -60,13 +125,12 @@ class EmployeeController extends Controller
             $employee->second_name = $request->get('second_name');
         if($request->has('third_name'))
             $employee->third_name = $request->get('third_name');
-        if($request->has('specialization_id'))
-            $employee->nationality_id = $request->get('nationality_id');
+        if($request->has('nationality_id'))
+            $employee->nationality_id = (int)$request->get('nationality_id');
         if($request->has('address'))
             $employee->address = $request->get('address');
         if($request->has('date_of_birth'))
             $employee->date_of_birth = $request->get('date_of_birth');
-
         if($request->has('phone'))
             $employee->phone = $request->get('phone');
         if($request->has('email'))
@@ -74,20 +138,17 @@ class EmployeeController extends Controller
         if($request->has('social_status'))
             $employee->social_status = $request->get('social_status');
         if($request->has('job_id'))
-            $employee->job_id = $request->get('job_id');
+            $employee->job_id = (int)$request->get('job_id');
         if($request->has('sex_id'))
-            $employee->sex_id = $request->get('sex_id');
+            $employee->sex_id = (int)$request->get('sex_id');
         if($request->has('blood_id'))
-            $employee->blood_id = $request->get('blood_id');
+            $employee->blood_id = (int)$request->get('blood_id');
         if($request->has('notes'))
             $employee->notes = $request->get('notes');
         if($request->has('image'))
-            $employee->notes = $request->get('image');
-        if($request->has('date_of_hiring'))
-            $employee->date_of_hiring = $request->get('date_of_hiring');
-
+            $employee->image = $request->get('image');
         $employee->save();
-        $showEmployee = Employee::where('id',$id)->get();
+        $showEmployee = Employee::find($id);
         return new EmployeeResource($showEmployee);
     }
 

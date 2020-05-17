@@ -13,7 +13,7 @@ $factory->define(Nurse::class, function (Faker $faker) {
         'third_name'=>$faker->lastName,
         'nationality_id'=>$faker->numberBetween(1,5),
         'address'=>$faker->address,
-        'date-of-birth'=>$faker->date(),
+        'date_of_birth'=>$faker->date(),
         'phone'=>$faker->phoneNumber,
         'email'=>$faker->email,
         'social_status'=>$faker->randomElement(['Married','Celibate']),

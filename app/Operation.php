@@ -23,12 +23,12 @@ class Operation extends Model
 
     public function surgeon()
     {
-        return $this->belongsTo(Doctor::class, 'id', 'surgeon_id');
+        return $this->belongsTo(Doctor::class, 'surgeon_id');
     }
 
     public function anesthesiologist()
     {
-        return $this->belongsTo(Doctor::class, 'id', 'anesthesiologist_id');
+        return $this->belongsTo(Doctor::class, 'anesthesiologist_id', 'id');
     }
 
 }

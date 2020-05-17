@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class DiagnoseResource extends JsonResource
+class DoctorSurgeryResource extends JsonResource
 {
     /**
      * Transform the resource collection into an array.
@@ -17,12 +17,8 @@ class DiagnoseResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'diagnose'=>$this->diagnose,
-            'drugs'=>$this->drugs,
-            'doctor_id'=>$this->doctor_id,
-            'patient_case_id'=>$this->patient_case_id,
-            'doctor_name'=>$this->doctor->show_name(),
-            'patient_name'=>$this->patient_case->patient->show_name(),
+            'name'=>$this->patient->show_name(),
+            'content'=>$this->name
         ];
     }
 }

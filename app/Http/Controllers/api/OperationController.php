@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers\api;
 
+use App\Diagnose;
+use App\Doctor;
+use App\Http\Resources\DiagnoseResource;
+use App\Http\Resources\DoctorResource;
 use App\Http\Resources\OperationResource;
 use App\Http\Resources\OperationsResource;
+use App\Http\Resources\ShowOperationsResource;
 use App\Operation;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class OperationController extends Controller
 {
@@ -18,7 +25,7 @@ class OperationController extends Controller
     public function index()
     {
         $operations = Operation::with(['patient'])->paginate();
-        return  new OperationsResource($operations);
+        return  ShowOperationsResource::collection($operations);
     }
 
     /**
@@ -29,7 +36,26 @@ class OperationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'anesthesiologist_id' => 'required',
+            'surgeon_id'=>'required',
+            'anesthetic_id'=>'required',
+            'patient_id'=>'required',
+            'name_of_surgery'=>'required',
+            'date_of_surgery'=>'required',
+        ]);
+
+        $operation = new Operation();
+
+        $operation->anesthesiologist_id = $request->input('anesthesiologist_id');
+        $operation->surgeon_id = $request->input('surgeon_id');
+        $operation->anesthetic_id = $request->input('anesthetic_id');
+        $operation->patient_id = $request->input('patient_id');
+        $operation->name = $request->input('name_of_surgery');
+        $operation->date = $request->input('date_of_surgery');
+
+        $operation->save();
+        return new OperationResource($operation);
     }
 
     /**
@@ -40,7 +66,7 @@ class OperationController extends Controller
      */
     public function show($id)
     {
-        $operation = Operation::with(['patient'])->where('id',$id)->get();
+        $operation = Operation::with(['patient'])->find($id);
         return  new OperationResource($operation);
     }
 
@@ -53,7 +79,24 @@ class OperationController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        $operation = Operation::find($id);
+        if($request->has('anesthesiologist_id'))
+            $operation->anesthesiologist_id = $request->get('anesthesiologist_id');
+        if($request->has('surgeon_id'))
+            $operation->surgeon_id = $request->get('surgeon_id');
+        if($request->has('anesthetic_id'))
+            $operation->anesthetic_id = $request->get('anesthetic_id');
+        if($request->has('patient_id'))
+            $operation->patient_id = $request->get('patient_id');
+        if($request->has('anesthetic_id'))
+            $operation->anesthetic_id = $request->get('anesthetic_id');
+        if($request->has('name_of_surgery'))
+            $operation->name = $request->get('name_of_surgery');
+        if($request->has('date_of_surgery'))
+            $operation->date = $request->get('date_of_surgery');
+        $operation->save();
+        $operation = Operation::find($id);
+        return new OperationResource($operation);
     }
 
     /**

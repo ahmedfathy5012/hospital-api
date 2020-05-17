@@ -44,14 +44,14 @@ class DatabaseSeeder extends Seeder
         //$this->call(UsersTableSeeder::class);
  //       factory(User ::class , 1000)->create();
    //     factory(Doctor ::class , 100)->create();
-  //      factory(Patient ::class , 600)->create();
+   //     factory(Patient ::class , 600)->create();
   //      factory(Nurse ::class , 150)->create();
-  //      factory(Employee ::class , 150)->create();
+        factory(Employee ::class , 150)->create();
   //      factory(Nationality ::class , 5)->create();
   //      factory(Sex ::class , 3)->create();
  //      factory(Blood ::class , 8)->create();
  //       factory(Job ::class ,11)->create();
-        factory(Specialization ::class ,10)->create();
+ //       factory(Specialization ::class ,10)->create();
 //
  //       factory(Ambulance ::class ,10)->create();
  //       factory(Anesthetic ::class ,20)->create();

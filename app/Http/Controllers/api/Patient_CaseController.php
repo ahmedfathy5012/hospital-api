@@ -40,8 +40,8 @@ class Patient_CaseController extends Controller
      */
     public function show($id)
     {
-        $patient_case = Patient_Case::with(['diagnose','patient'])->where('id',$id)->get();
-        return new Patient_caseResource($patient_case);
+        $patient_case = Patient_Case::with(['diagnose','patient'])->find($id);
+        return new Patient_casesResource($patient_case);
     }
 
     /**

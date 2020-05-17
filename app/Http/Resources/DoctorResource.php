@@ -43,6 +43,8 @@ class DoctorResource extends JsonResource
             'doctor_specialization'=> new SpecializationResource($this->specialization),
             'doctor_nationality'=> new NationalityResource($this->nationality),
             'doctor_diagnoses'=>DiagnosesResource::collection($this->diagnoses),
+            //'doctor_surgery'=>DoctorSurgeryResource::collection($this->operations_surgeon != null ? $this->operations_surgeon: $this->operations_anesthesiologist),
+            //'doctor_surgery'=>DoctorSurgeryResource::collection($this->operations_surgeon != null ? $this->operations_surgeon: $this->operations_anesthesiologist),
 
         ];
     }

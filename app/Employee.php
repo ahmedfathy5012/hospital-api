@@ -45,5 +45,14 @@ class Employee extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function full_name(){
+        return $this->first_name." ".$this->second_name." ".$this->third_name;
+    }
+
+    public function show_name(){
+        return $this->first_name." "." ".$this->third_name;
+    }
+
+
 
 }

@@ -2,9 +2,11 @@
 
 namespace App\Http\Resources;
 
+use App\Diagnose;
 use App\Doctor;
 use App\Employee;
 use App\Nurse;
+use App\Operation;
 use App\Patient;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Resources\Json\ResourceCollection;
@@ -24,7 +26,8 @@ class CountResource extends JsonResource
             'employee_count'=> Employee::all()->count(),
             'patient_count'=> Patient::all()->count(),
             'nurse_count'=> Nurse::all()->count(),
-
+            'diagnose_count' => Diagnose::all()->count(),
+            'surgery_count' => Operation::all()->count()
         ];
     }
 }

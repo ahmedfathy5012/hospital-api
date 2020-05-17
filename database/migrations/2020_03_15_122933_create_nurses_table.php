@@ -17,7 +17,7 @@ class CreateNursesTable extends Migration {
 			$table->bigInteger('nationality_id');
 			//$table->string('Identification_number');
 			$table->string('address');
-			$table->date('date-of-birth');
+			$table->date('date_of_birth')->nullable();
 			$table->string('phone');
 			$table->string('email')->nullable();
 			$table->string('social_status');

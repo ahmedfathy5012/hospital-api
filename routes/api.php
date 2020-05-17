@@ -20,10 +20,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('doctors', 'Api\DoctorController@index');
-Route::get('patients', 'Api\PatientController@index');
-Route::get('employees', 'Api\EmployeeController@index');
-Route::get('nurses', 'Api\NurseController@index');
+
+
+
 Route::get('operations', 'Api\OperationController@index');
 Route::get('ambulances', 'Api\AmbulanceController@index');
 Route::get('analyzes', 'Api\AnalyzeController@index');
@@ -54,10 +53,6 @@ Route::get('jobs', 'Api\JobController@index');
 
 
 
-Route::get('doctor/{id}', 'Api\DoctorController@show');
-Route::get('patient/{id}', 'Api\PatientController@show');
-Route::get('employee/{id}', 'Api\EmployeeController@show');
-Route::get('nurse/{id}', 'Api\NurseController@show');
 Route::get('operation/{id}', 'Api\OperationController@show');
 Route::get('ambulance/{id}', 'Api\AmbulanceController@show');
 Route::get('analyze/{id}', 'Api\AnalyzeController@show');
@@ -118,10 +113,7 @@ Route::delete('delete-hospital/{id}', 'Api\HospitalController@delete');
 Route::delete('delete-job/{id}', 'Api\JobController@delete');
 
 
-Route::post('update-doctor/{id}', 'Api\DoctorController@update');
 Route::post('update-patient/{id}', 'Api\PatientController@update');
-Route::post('update-employee/{id}', 'Api\EmployeeController@update');
-Route::post('update-nurse/{id}', 'Api\NurseController@update');
 Route::post('update-delete-operation/{id}', 'Api\OperationController@update');
 Route::post('update-ambulance/{id}', 'Api\AmbulanceController@update');
 Route::post('update-analyze/{id}', 'Api\AnalyzeController@update');
@@ -153,8 +145,50 @@ Route::post('add-room', 'Api\RoomController@store');
 Route::post('add-clinic', 'Api\ClinicController@store');
 
 
+
+Route::get('patient/{id}', 'Api\PatientController@show');
+
+Route::get('doctors', 'Api\DoctorController@index');
+Route::get('patients', 'Api\PatientController@index');
+Route::get('employees', 'Api\EmployeeController@index');
+Route::get('employees', 'Api\EmployeeController@index');
+Route::get('nurses', 'Api\NurseController@index');
+Route::get('anesthetics', 'Api\AnestheticController@index');
+Route::get('diagnoses', 'Api\DiagnoseController@index');
+Route::get('operations', 'Api\OperationController@index');
+
+
+
+Route::get('doctor/{id}', 'Api\DoctorController@show');
+Route::get('patient/{id}', 'Api\PatientController@show');
+Route::get('employee/{id}', 'Api\EmployeeController@show');
+Route::get('nurse/{id}', 'Api\NurseController@show');
+
+
+Route::post('update-doctor/{id}', 'Api\DoctorController@update');
+Route::post('update-patient/{id}', 'Api\PatientController@update');
+Route::post('update-employee/{id}', 'Api\EmployeeController@update');
+Route::post('update-nurse/{id}', 'Api\NurseController@update');
+Route::post('update-diagnose/{id}', 'Api\DiagnoseController@update');
+Route::post('update-operation/{id}', 'Api\OperationController@update');
+
+
+
+Route::get('diagnose/{id}', 'Api\DiagnoseController@show');
+Route::get('operation/{id}', 'Api\OperationController@show');
+
+
+
 Route::post('add-doctor', 'Api\DoctorController@store');
-Route::post('add-user', 'Api\UserController@register');
+Route::post('add-employee', 'Api\EmployeeController@store');
+Route::post('add-nurse', 'Api\NurseController@store');
+Route::post('add-patient', 'Api\PatientController@store');
+Route::post('add-patient', 'Api\PatientController@store');
+Route::post('add-diagnose', 'Api\DiagnoseController@addDiagnose');
+Route::post('add-case', 'Api\DiagnoseController@addCase');
+
+Route::post('add-operation', 'Api\OperationController@store');
+
 Route::get('data-count', 'Api\UserController@data_count');
 
 Route::post('login', 'Api\UserController@login');

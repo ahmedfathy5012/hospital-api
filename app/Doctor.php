@@ -68,12 +68,12 @@ class Doctor extends Model
 
     public function operations_anesthesiologist()
     {
-        return $this->hasMany(Operation::class, 'anesthesiologist_id');
+        return $this->hasMany(Operation::class, 'anesthesiologist_id' , 'id');
     }
 
     public function operations_surgeon()
     {
-        return $this->hasOne(Operation::class, 'surgeon_id');
+        return $this->hasOne(Operation::class, 'surgeon_id' ,'id');
     }
 
     public function user()

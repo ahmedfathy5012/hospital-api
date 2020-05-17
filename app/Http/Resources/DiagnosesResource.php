@@ -20,8 +20,6 @@ class DiagnosesResource extends JsonResource
             'name'=>$this->patient_case->patient->show_name(),
             'content'=>$this->diagnose
 
-
-
 //         'diagnose_id'=>$this->id,
 //         'diagnose'=>$this->diagnose,
 //         'drugs'=>$this->drugs,
