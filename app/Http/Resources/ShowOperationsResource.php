@@ -20,7 +20,8 @@ class ShowOperationsResource extends JsonResource
             'patient_name'=>$this->patient->show_name(),
             'doctor_name'=>$this->surgeon->show_name(),
             'patient_image'=>$this->patient->image,
-            'patient_full_name'=>$this->patient->full_name()
+            'patient_full_name'=>$this->patient->full_name(),
+            
         ];
     }
 }

@@ -3,39 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9d042719-438e-47a3-bee8-62843463a647" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Doctor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/AnestheticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/AnestheticController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/DiagnoseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/DiagnoseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/DoctorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/EmployeeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/NurseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/NurseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/OperationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/OperationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/PatientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/Patient_CaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/Patient_CaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/AnestheticsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/AnestheticsResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CountResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CountResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DiagnoseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DiagnoseResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DiagnosesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DiagnosesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DoctorResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DoctorResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/EmployeeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EmployeeResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DoctorsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DoctorsResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/EmployeesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EmployeesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/NurseResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/NurseResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/NursesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/NursesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/OperationResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/OperationResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/PatientResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PatientResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Patient_casesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Patient_casesResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/PatientsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PatientsResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nurse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nurse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Operation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Operation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Patient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/NurseFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/NurseFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/PatientFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PatientFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_15_122933_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_122933_create_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_15_122933_create_nurses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_122933_create_nurses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_15_122933_create_patients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_15_122933_create_patients_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ShowOperationsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ShowOperationsResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -220,6 +199,14 @@
       <workItem from="1588497068173" duration="11390000" />
       <workItem from="1589007083738" duration="632000" />
       <workItem from="1589014205282" duration="1654000" />
+      <workItem from="1589675937208" duration="106000" />
+      <workItem from="1589758630788" duration="2367000" />
+      <workItem from="1589931557347" duration="89000" />
+      <workItem from="1590053695887" duration="2608000" />
+      <workItem from="1590810290907" duration="610000" />
+      <workItem from="1591077314011" duration="141000" />
+      <workItem from="1591085410060" duration="123000" />
+      <workItem from="1591086524837" duration="5306000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,8 @@ class PatientsResource extends JsonResource
             'patient_image'=>$this->image,
             'patient_full_name'=>$this->full_name(),
             'patient_show_name'=>$this->show_name(),
-            'patient_date_of_file'=>$this->date_of_file
+            'patient_date_of_file'=>$this->date_of_file,
+            'gender'=>$this->sex->name,
         ];
     }
 }

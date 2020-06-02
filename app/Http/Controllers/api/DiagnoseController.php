@@ -48,7 +48,7 @@ class DiagnoseController extends Controller
         $case->patient_id = $request->input('patient_id');
         $case->entry_date = $request->input('entry_date');
         if($request->input('exit_date'))
-        $case->entry_date = $request->input('entry_date');
+        $case->exit_date = $request->input('exit_date');
 
         $case->save();
         $diagnose = new Diagnose();

@@ -47,7 +47,8 @@ class DoctorController extends Controller
             'job_id'=>'required',
             'sex_id'=>'required',
             'blood_id'=>'required',
-            'date_of_hiring'=>'required'
+            'date_of_hiring'=>'required',
+            'user_role_id'=>'required'
         ]);
         $user = new User();
         $user->role_id = 3 ;
@@ -55,6 +56,7 @@ class DoctorController extends Controller
         $user->name = $request->input('first_name');
         $user->password = Hash::make($request->input('Identification_number'));
         $user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
+        $user->role_id = $request->input('user_role_id');
         $user->save();
    // Hash::make($request->input('Identification_number'));
         $doctor = new Doctor();
@@ -142,6 +144,11 @@ class DoctorController extends Controller
             $doctor->image = $request->get('image');
         if($request->has('date_of_hiring'))
             $doctor->date_of_hiring = $request->get('date_of_hiring');
+        if($request->has('user_role_id')){
+            $user = User::find($doctor->user_id);
+            $user->role_id = $request->get('user_role_id');
+            $user->save();
+        }
 
         $doctor->save();
         $doctor = Doctor::find($id);

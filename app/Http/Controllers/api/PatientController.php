@@ -45,7 +45,8 @@ class PatientController extends Controller
             'job'=>'required',
             'sex_id'=>'required',
             'blood_id'=>'required',
-            'date_of_file'=>'required'
+            'date_of_file'=>'required',
+            'user_role_id'=>'required'
         ]);
         $user = new User();
         $user->role_id = 3 ;
@@ -53,6 +54,7 @@ class PatientController extends Controller
         $user->name = $request->input('first_name');
         $user->password = Hash::make($request->input('Identification_number'));
         $user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
+        $user->role_id = $request->input('user_role_id');
         $user->save();
         // Hash::make($request->input('Identification_number'));
         $patient = new Patient();
@@ -137,7 +139,11 @@ class PatientController extends Controller
             $patient->notes = $request->get('image');
         if($request->has('date_of_file'))
             $patient->date_of_file = $request->get('date_of_file');
-
+        if($request->has('user_role_id')){
+            $user = User::find($patient->user_id);
+            $user->role_id = $request->get('user_role_id');
+            $user->save();
+        }
         $patient->save();
         $showPatient = Patient::find($id);
         return new PatientResource($showPatient);

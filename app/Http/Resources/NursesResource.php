@@ -20,7 +20,8 @@ class NursesResource extends JsonResource
         'nurse_image'=>$this->image,
         'nurse_full_name'=>$this->full_name(),
         'nurse_show_name'=>$this->show_name(),
-        'nurse_job'=>new JobResource($this->job)
-    ];;
+        'nurse_job'=>new JobResource($this->job),
+        'gender'=>$this->sex->name,
+    ];
     }
 }

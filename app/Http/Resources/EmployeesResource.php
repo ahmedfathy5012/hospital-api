@@ -20,7 +20,8 @@ class EmployeesResource extends JsonResource
             'employee_image'=>$this->image,
             'employee_full_name'=>$this->full_name(),
             'employee_show_name'=>$this->show_name(),
-            'employee_job'=>new JobResource($this->job)
+            'employee_job'=>new JobResource($this->job),
+            'gender'=>$this->sex->name,
         ];
     }
 }

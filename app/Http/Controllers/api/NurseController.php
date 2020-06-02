@@ -46,7 +46,8 @@ class NurseController extends Controller
             'job_id'=>'required',
             'sex_id'=>'required',
             'blood_id'=>'required',
-            'date_of_hiring'=>'required'
+            'date_of_hiring'=>'required',
+            'user_role_id'=>'required'
         ]);
         $user = new User();
         $user->role_id = 2;
@@ -54,6 +55,7 @@ class NurseController extends Controller
         $user->name = $request->input('first_name');
         $user->password = Hash::make($request->input('Identification_number'));
         $user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
+        $user->role_id = $request->input('user_role_id');
         $user->save();
 
         $nurse = new Nurse();
@@ -133,7 +135,11 @@ class NurseController extends Controller
             $nurse->notes = $request->get('notes');
         if($request->has('image'))
             $nurse->image = $request->get('image');
-
+        if($request->has('user_role_id')){
+            $user = User::find($nurse->user_id);
+            $user->role_id = $request->get('user_role_id');
+            $user->save();
+        }
         $nurse->save();
         $showNurse = Nurse::find($id);
         return new NurseResource($showNurse);

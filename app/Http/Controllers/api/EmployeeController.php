@@ -61,7 +61,8 @@ class EmployeeController extends Controller
             'job_id'=>'required',
             'sex_id'=>'required',
             'blood_id'=>'required',
-            'date_of_hiring'=>'required'
+            'date_of_hiring'=>'required',
+            'user_role_id'=>'required'
         ]);
         $user = new User();
         $user->role_id = 2 ;
@@ -69,6 +70,8 @@ class EmployeeController extends Controller
         $user->name = $request->input('first_name');
         $user->password = Hash::make($request->input('Identification_number'));
         $user->api_token = bin2hex(openssl_random_pseudo_bytes(30));
+        $user->role_id = $request->input('user_role_id');
+
         $user->save();
 
         $employee = new Employee();
@@ -147,6 +150,12 @@ class EmployeeController extends Controller
             $employee->notes = $request->get('notes');
         if($request->has('image'))
             $employee->image = $request->get('image');
+        if($request->has('user_role_id')){
+            $user = User::find($employee->user_id);
+            $user->role_id = $request->get('user_role_id');
+            $user->save();
+        }
+
         $employee->save();
         $showEmployee = Employee::find($id);
         return new EmployeeResource($showEmployee);
