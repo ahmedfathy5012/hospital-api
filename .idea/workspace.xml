@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d042719-438e-47a3-bee8-62843463a647" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/DiagnoseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/DiagnoseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/DoctorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/NurseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/NurseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/PatientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/DoctorsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/DoctorsResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/EmployeesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/EmployeesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/NursesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/NursesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/PatientsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/PatientsResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ShowDiagnosesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ShowDiagnosesResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Resources/ShowOperationsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ShowOperationsResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +111,7 @@
   <component name="ProjectId" id="1ZBU68QNB68ii4YqMGOYvRsrzIY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -207,6 +198,8 @@
       <workItem from="1591077314011" duration="141000" />
       <workItem from="1591085410060" duration="123000" />
       <workItem from="1591086524837" duration="5306000" />
+      <workItem from="1591113207948" duration="77000" />
+      <workItem from="1591249375805" duration="514000" />
     </task>
     <servers />
   </component>

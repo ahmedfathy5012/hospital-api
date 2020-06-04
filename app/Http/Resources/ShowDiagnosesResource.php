@@ -21,6 +21,7 @@ class ShowDiagnosesResource extends JsonResource
             'patient_image'=>$this->patient_case->patient->image,
             'patient_full_name'=>$this->patient_case->patient->full_name(),
             'doctor_name'=>$this->doctor != null ? $this->doctor->show_name() : ' ',
-        ];
+            'gender'=>$this->patient_case->patient->sex->name,
+            ];
     }
 }
