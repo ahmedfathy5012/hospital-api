@@ -7,9 +7,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Dead::class, function (Faker $faker) {
     return [
-        'patient_id'=>$faker->unique()->numberBetween(1,600),
+        'patient_id'=>$faker->unique()->numberBetween(40,45),
         'death_date'=>$faker->date(),
         'cause_of_death'=>$faker->text(200),
-        'doctor_id'=>$faker->numberBetween(1,100),
+        'doctor_id'=>$faker->numberBetween(1,5),
     ];
 });

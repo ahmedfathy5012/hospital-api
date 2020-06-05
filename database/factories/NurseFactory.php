@@ -22,6 +22,6 @@ $factory->define(Nurse::class, function (Faker $faker) {
         'blood_id' =>$faker->numberBetween(1,8),
         'notes'=>$faker->text(200),
         'image'=>$faker->imageUrl(),
-        'user_id'=>$faker->unique()->numberBetween(101,250),
+        'user_id'=>$faker->unique()->numberBetween(36,50),
     ];
 });

@@ -9,8 +9,8 @@ $factory->define(Diagnose::class, function (Faker $faker) {
     return [
         'diagnose'=>$faker->text(200),
         'drugs'=>$faker->text(200),
-        'doctor_id'=>$faker->numberBetween(1,100),
-        'patient_case_id'=>$faker->numberBetween(1,1000),
+        'doctor_id'=>$faker->numberBetween(1,20),
+        'patient_case_id'=>$faker->numberBetween(1,50),
 
     ];
 });

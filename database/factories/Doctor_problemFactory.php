@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Doctor_problem::class, function (Faker $faker) {
     return [
-        'doctor_id'=>$faker->numberBetween(1,100),
+        'doctor_id'=>$faker->numberBetween(1,50),
         'doctor_problem'=>$faker->text(200),
 
     ];

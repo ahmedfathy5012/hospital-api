@@ -7,8 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Ambulance::class, function (Faker $faker) {
     return [
-        'driver_id'=>$faker->numberBetween(1,10),
-        'paramedic_id'=>$faker->numberBetween(11,20),
+        'driver_id'=>$faker->numberBetween(1,5),
+        'paramedic_id'=>$faker->numberBetween(6,10),
         'car_number'=>$faker->creditCardNumber
     ];
 });
