@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d042719-438e-47a3-bee8-62843463a647" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ShowDiagnosesResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ShowDiagnosesResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ShowOperationsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ShowOperationsResource.php" afterDir="false" />
-    </list>
+    <list default="true" id="9d042719-438e-47a3-bee8-62843463a647" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +195,7 @@
       <workItem from="1591086524837" duration="5306000" />
       <workItem from="1591113207948" duration="77000" />
       <workItem from="1591249375805" duration="514000" />
+      <workItem from="1591294085613" duration="440000" />
     </task>
     <servers />
   </component>
