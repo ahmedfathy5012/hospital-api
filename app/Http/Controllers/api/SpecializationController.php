@@ -17,8 +17,8 @@ class SpecializationController extends Controller
      */
     public function index()
     {
-        $specializations = Specialization::with(['doctor','hospitals','outpatient_clinics'])->paginate();
-        return new SpecializationsResource($specializations);
+
+        return SpecializationResource::collection(Specialization::all());
     }
 
     /**

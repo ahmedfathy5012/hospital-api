@@ -17,8 +17,7 @@ class JobController extends Controller
      */
     public function index()
     {
-        $jobs = Job::with(['nurse','doctor','employee'])->paginate();
-        return new JobsResource($jobs);
+        return JobResource::collection(Job::all());
     }
 
     /**

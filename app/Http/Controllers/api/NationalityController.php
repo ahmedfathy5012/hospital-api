@@ -17,8 +17,7 @@ class NationalityController extends Controller
      */
     public function index()
     {
-        $nationalities = Nationality::with(['doctor','nurse','employee','patient'])->paginate();
-        return new NationalitiesResource($nationalities);
+        return NationalityResource::collection(Nationality::all());
     }
 
     /**

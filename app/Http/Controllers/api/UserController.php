@@ -4,8 +4,10 @@ namespace App\Http\Controllers\api;
 
 use App\Doctor;
 use App\Http\Resources\CountResource;
+use App\Http\Resources\rolesResource;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\UsersResource;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -107,5 +109,9 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getRoles(){
+        return rolesResource::collection(Role::all());
     }
 }

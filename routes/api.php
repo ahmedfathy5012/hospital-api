@@ -36,19 +36,24 @@ use Illuminate\Support\Facades\Route;
 //Route::get('doctor_problems', 'Api\Doctor_problemController@index');
 //Route::get('drugs', 'Api\DrugController@index');
 //Route::get('emergency', 'Api\EmergencyController@index');
-//Route::get('nationalities', 'Api\NationalityController@index');
+
 //Route::get('outpatient_clinics', 'Api\Outpatient_clinicController@index');
-//
+
+//Route::get('jobs', 'Api\JobController@index');
+//Route::get('specializations', 'Api\SpecializationController@index');
+//Route::get('nationalities', 'Api\NationalityController@index');
+//Route::get('sex', 'Api\SexController@index');
+
 //Route::get('patient_problems', 'Api\Patient_problemController@index');
 //Route::get('rooms', 'Api\RoomController@index');
 //Route::get('sections', 'Api\SectionController@index');
-//Route::get('sex', 'Api\SexController@index');
-//Route::get('specializations', 'Api\SpecializationController@index');
+
+
 //Route::get('tests', 'Api\TestController@index');
 //Route::get('users', 'Api\UserController@index');
 //Route::get('work_periods', 'Api\Work_periodController@index');
 //Route::get('hospitals', 'Api\HospitalController@index');
-//Route::get('jobs', 'Api\JobController@index');
+
 //
 //
 //
@@ -178,6 +183,15 @@ Route::middleware('auth:api')->group(function () {
     Route::get('diagnoses', 'Api\DiagnoseController@index');
     Route::get('operations', 'Api\OperationController@index');
     Route::get('patient_cases', 'Api\Patient_CaseController@index');
+    Route::get('blood', 'Api\BloodController@index');
+
+    Route::get('roles', 'Api\UserController@getRoles');
+
+    Route::get('jobs', 'Api\JobController@index');
+    Route::get('specializations', 'Api\SpecializationController@index');
+    Route::get('nationalities', 'Api\NationalityController@index');
+    Route::get('sex', 'Api\SexController@index');
+
 
     Route::get('doctor/{id}', 'Api\DoctorController@show');
     Route::get('patient/{id}', 'Api\PatientController@show');

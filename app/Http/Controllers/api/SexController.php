@@ -16,8 +16,7 @@ class SexController extends Controller
      */
     public function index()
     {
-        $sex = Sex::with(['doctor','nurse','employee','patient'])->paginate();
-        return new SexResource($sex);
+        return SexResource::collection(Sex::all());
     }
 
     /**

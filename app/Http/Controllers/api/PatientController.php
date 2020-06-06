@@ -49,7 +49,6 @@ class PatientController extends Controller
             'user_role_id'=>'required'
         ]);
         $user = new User();
-        $user->role_id = 3 ;
         $user->Identification_number = $request->input('Identification_number');
         $user->name = $request->input('first_name');
         $user->password = Hash::make($request->input('Identification_number'));

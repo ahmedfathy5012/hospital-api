@@ -16,8 +16,7 @@ class BloodController extends Controller
      */
     public function index()
     {
-        $blood = Blood::with(['doctor','employee','nurse','patient'])->paginate();
-        return  new BloodResource($blood);
+       return BloodResource::collection(Blood::all());
     }
 
     /**
