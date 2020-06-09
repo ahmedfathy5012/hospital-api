@@ -172,7 +172,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('login', 'Api\UserController@login');
+Route::post('login', 'Api\\UserController@login');
 
 
 Route::middleware('auth:api')->group(function () {
