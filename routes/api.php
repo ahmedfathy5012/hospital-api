@@ -172,7 +172,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('login', 'Api\\UserController@login');
+//Route::post('login', 'Api\UserController@login');
+
+Route::post('login', function (){
+    return Doctor::all();
+});
 
 
 Route::middleware('auth:api')->group(function () {
