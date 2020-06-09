@@ -42,17 +42,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         //$this->call(UsersTableSeeder::class);
-//        factory(User ::class , 100)->create();
-//        factory(Doctor ::class , 20)->create();
-//        factory(Patient ::class , 50)->create();
-//        factory(Nurse ::class , 15)->create();
-//        factory(Employee ::class , 15)->create();
-//        factory(Nationality ::class , 5)->create();
-//        factory(Sex ::class , 3)->create();
-//       factory(Blood ::class , 8)->create();
-//        factory(Job ::class ,11)->create();
-//        factory(Specialization ::class ,10)->create();
+        factory(User ::class , 100)->create();
+        factory(Doctor ::class , 20)->create();
+        factory(Patient ::class , 50)->create();
+        factory(Nurse ::class , 15)->create();
+        factory(Employee ::class , 15)->create();
+        factory(Nationality ::class , 5)->create();
+        factory(Sex ::class , 3)->create();
+       factory(Blood ::class , 8)->create();
+        factory(Job ::class ,11)->create();
+        factory(Specialization ::class ,10)->create();
 //
+
 //        factory(Ambulance ::class ,5)->create();
 //        factory(Anesthetic ::class ,20)->create();
 //        factory(Operation ::class ,20)->create();
