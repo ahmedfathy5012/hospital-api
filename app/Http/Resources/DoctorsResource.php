@@ -21,7 +21,7 @@ class DoctorsResource extends JsonResource
             'doctor_full_name'=>$this->full_name(),
             'doctor_show_name'=>$this->show_name(),
             'doctor_specialization'=> new SpecializationResource($this->specialization),
-            'gender'=>$this->sex->name,
+            //'gender'=>$this->sex->name,
         ];
     }
 }
