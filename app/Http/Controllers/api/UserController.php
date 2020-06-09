@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace app\Http\Controllers\api;
 
 use App\Doctor;
 use App\Http\Resources\CountResource;
