@@ -42,16 +42,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         //$this->call(UsersTableSeeder::class);
-        factory(User ::class , 100)->create();
-        factory(Doctor ::class , 20)->create();
-        factory(Patient ::class , 50)->create();
-        factory(Nurse ::class , 15)->create();
-        factory(Employee ::class , 15)->create();
-        factory(Nationality ::class , 5)->create();
-        factory(Sex ::class , 3)->create();
-       factory(Blood ::class , 8)->create();
-        factory(Job ::class ,11)->create();
-        factory(Specialization ::class ,10)->create();
+//        factory(User ::class , 100)->create();
+//        factory(Doctor ::class , 20)->create();
+//        factory(Patient ::class , 50)->create();
+//        factory(Nurse ::class , 15)->create();
+//        factory(Employee ::class , 15)->create();
+//        factory(Nationality ::class , 5)->create();
+//        factory(Sex ::class , 3)->create();
+//       factory(Blood ::class , 8)->create();
+//        factory(Job ::class ,11)->create();
+//        factory(Specialization ::class ,10)->create();
 
 //        factory(Ambulance ::class ,5)->create();
 //        factory(Anesthetic ::class ,20)->create();
@@ -67,13 +67,13 @@ class DatabaseSeeder extends Seeder
 //        factory(Hospital ::class ,20)->create();
 //        factory(Outpatient_clinic ::class ,7)->create();
 //        factory(Patient_problem ::class ,10)->create();
-//        factory(Room ::class ,300)->create();
+//        factory(Room ::class ,100)->create();
 //        factory(Section ::class ,15)->create();
 //       factory(Work_period ::class ,20)->create();
 //        factory(Analyze ::class ,20)->create();
 //        factory(\App\Test ::class ,20)->create();
 //        factory(Day ::class ,7)->create();
-//        factory(Role::class,5)->create();
+        factory(Role::class,5)->create();
 
     }
 }

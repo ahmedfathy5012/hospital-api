@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 
 Route::get('test', function () {
-    echo "walaa";
+    return Doctor::all();
 });
 
 
