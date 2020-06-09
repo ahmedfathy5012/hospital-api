@@ -172,7 +172,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('login', 'Api\UserController@login');
+Route::post('login', '/Api/UserController@login');
 
 Route::get('test', function (){
     return Doctor::all();
