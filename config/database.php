@@ -45,7 +45,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env(parse_url(getenv("CLEARDB_DATABASE_URL"))),
+            'url' => env(parse_url(getenv("CLEARDB_DATABASE_URL"))['url']),
             'host' => env('DB_HOST', 'us-cdbr-east-05.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'heroku_299b4d4f283bd1d'),
