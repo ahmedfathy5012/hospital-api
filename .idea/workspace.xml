@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d042719-438e-47a3-bee8-62843463a647" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/BloodController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/BloodController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/DoctorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/JobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/NationalityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/NationalityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/NurseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/NurseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/PatientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/SexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/SexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/SpecializationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/SpecializationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/JobsResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/JobsResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="9d042719-438e-47a3-bee8-62843463a647" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +204,7 @@
       <workItem from="1591455331165" duration="1215000" />
       <workItem from="1591462467617" duration="20000" />
       <workItem from="1591466059425" duration="1606000" />
+      <workItem from="1591582200963" duration="301000" />
     </task>
     <servers />
   </component>
