@@ -37,9 +37,7 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories",
-            "database",
-            "app/Http/Controllers/api/UserController.php"
+            "database/factories"
         ]
     },
     "autoload-dev": {
