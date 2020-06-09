@@ -33,16 +33,11 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Http\\": "Http/",
-            "Controllers\\": "Controllers/",
-            "Api\\": "api/"
+            "App\\": "app/"
         },
         "classmap": [
             "database/seeds",
-            "database/factories",
-            "database/migrations",
-            "app/Http/Controllers/api"
+            "database/factories"
         ]
     },
     "autoload-dev": {
