@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers\Api;
 
 use App\Doctor_problem;
 use App\Http\Resources\Doctor_problemResource;

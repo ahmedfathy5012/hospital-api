@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\NationalitiesResource;
 use App\Http\Resources\NationalityResource;
