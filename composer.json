@@ -39,7 +39,7 @@
             "database/seeds",
             "database/factories",
             "database",
-            "app/Http/Controllers",
+            "app/Http/Controllers/api",
             "app/Models",
             "app/Console/Commands"
         ]
