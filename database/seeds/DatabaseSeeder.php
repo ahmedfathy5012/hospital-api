@@ -52,7 +52,7 @@ class DatabaseSeeder extends Seeder
 //       factory(Blood ::class , 8)->create();
 //        factory(Job ::class ,11)->create();
 //        factory(Specialization ::class ,10)->create();
-
+//
 //        factory(Ambulance ::class ,5)->create();
 //        factory(Anesthetic ::class ,20)->create();
 //        factory(Operation ::class ,20)->create();
@@ -62,12 +62,12 @@ class DatabaseSeeder extends Seeder
 //        factory(Diagnose ::class ,50)->create();
 //        factory(Patient_Case ::class ,50)->create();
 //        factory(Doctor_problem ::class ,10)->create();
-//        factory(Drug ::class ,500)->create();
+//        factory(Drug ::class ,50)->create();
 //        factory(Emergency ::class ,5)->create();
 //        factory(Hospital ::class ,20)->create();
 //        factory(Outpatient_clinic ::class ,7)->create();
 //        factory(Patient_problem ::class ,10)->create();
-//        factory(Room ::class ,100)->create();
+//        factory(Room ::class ,30)->create();
 //        factory(Section ::class ,15)->create();
 //       factory(Work_period ::class ,20)->create();
 //        factory(Analyze ::class ,20)->create();

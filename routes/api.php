@@ -173,7 +173,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('login', 'Api\UserController@login');
-Route::get('data-count', 'Api\UserController@data_count');
+
 
 Route::middleware('auth:api')->group(function () {
     Route::get('doctors', 'Api\DoctorController@index');
@@ -222,7 +222,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('add-operation', 'Api\OperationController@store');
 
 
-
+    Route::get('data-count', 'Api\UserController@data_count');
 });
 
 //Route::middleware('auth:api')->get('/user', function (Request $request) {
