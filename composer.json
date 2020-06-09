@@ -39,7 +39,7 @@
             "database/seeds",
             "database/factories",
             "database",
-            "app/Http/Controllers/api"
+            "app/Http/Controllers/api/UserController.php"
         ]
     },
     "autoload-dev": {
